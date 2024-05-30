@@ -83,6 +83,15 @@
             var navbarCollapse = $('.navbar-collapse');
             var navbarToggle = $('.navbar-toggle');
 
+            function isMobile() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                return /android|ipad|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+            }
+
+            if (!isMobile()) {
+                navbarToggle.addClass('hover-enabled');
+            }
+
             // Toggle the navbar on click/tap
             navbarToggle.on('click', function() {
                 navbarCollapse.collapse('toggle');

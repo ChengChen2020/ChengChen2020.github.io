@@ -186,18 +186,11 @@ span.highlight {
   background-color: transparent !important;
 }
 
-.navbar-toggle:hover {
+.navbar-toggle.hover-enabled:hover {
   background-color: #777 !important;
 }
 
-@media (hover: none) and (pointer: coarse) {
-    .navbar-toggle:hover {
-        background-color: transparent !important; /* Or whatever the default state is */
-    }
-}
-
-/* Ensure the dropdown is positioned right below the toggle button */
-.dropdown-menu {
+.navbar-collapse {
     right: 0;
     left: auto;
     text-align: right; /* Align dropdown menu content to the right */
