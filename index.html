@@ -107,6 +107,15 @@
                     $('button.navbar-toggle').click();
                 }
             });
+
+            // Toggle button state based on collapse state
+            navbarCollapse.on('show.bs.collapse', function() {
+                navbarToggle.removeClass('collapsed');
+            });
+
+            navbarCollapse.on('hidden.bs.collapse', function() {
+                navbarToggle.addClass('collapsed');
+            });
         });
 
     </script>
