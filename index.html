@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
   <!-- <link rel="icon" type="image/png" href="images/seal_icon.png"> -->
 </head>
@@ -38,35 +38,32 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <nav class="navbar navbar-default navbar-fixed-top">
-              <div class="container">
-                <div class="navbar-header page-scroll">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                  </button>
-                  <a class='navbar-brand page-scroll' href='/'>
+                </button>
+                <a class='navbar-brand page-scroll' href="/">
                     <span style='font-family:"Open Sans"; font-weight:300'>Cheng Chen</span>
-                  </a>
-                </div>
-            
-                <div id="navbar" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li style="font-size:20px"><a class='name' href="">HOME</a></li>
-                      
-                      <li style="font-size:20px"><a class='name' href="#news">News</a></li>
-                      <li style="font-size:20px"><a class='name' href="#Publications">Publications</a></li>
-                      <!-- <li style="font-size:20px"><a class='name' href="#experiences">Experiences</a></li> -->
-                      <li style="font-size:20px"><a class='name' href="#Awards">Awards</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class='name' href="">HOME</a></li>
+                    <li><a class='name' href="#news">News</a></li>
+                    <li><a class='name' href="#Publications">Publications</a></li>
+                    <li><a class='name' href="#Awards">Awards</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
             <!-- from https://yangekun.gitee.io/blog/2018/12/14/2018-12-14-Bootstrap%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8A%98%E5%8F%A0%E9%9A%90%E8%97%8F/ -->
-            <script>
+<!--             <script>
                   $(window).scroll(function () {
                 if ($(window).width() < 768) {
                   $("#navbar a").click(function () {
@@ -77,7 +74,42 @@
                   });
                 }
               });	
-            </script>
+            </script> -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var navbarCollapse = $('.navbar-collapse');
+            var navbarToggle = $('.navbar-toggle');
+
+            // Toggle the navbar on click/tap
+            navbarToggle.on('click', function() {
+                navbarCollapse.collapse('toggle');
+            });
+
+            // Collapse the navbar when a link is clicked (mobile)
+            $('.navbar-nav a').click(function() {
+                navbarCollapse.collapse('hide');
+            });
+
+            // Collapse the navbar when clicking outside of it
+            $(document).click(function(event) {
+                var clickover = $(event.target);
+                var isOpen = navbarCollapse.hasClass('show');
+                if (isOpen && !clickover.hasClass('navbar-toggle')) {
+                    navbarCollapse.collapse('hide');
+                }
+            });
+
+            $(window).scroll(function() {
+                if (navbarCollapse.hasClass('show')) {
+                    $('button.navbar-toggle').click();
+                }
+            });
+        });
+
+    </script>
 
           </td>
           </tr>
@@ -97,7 +129,9 @@
 
                 <!-- I also have a great time working closely with <a href="https://shenyujun.github.io/index.html">Dr. Yujun Shen</a> and <a href="https://justimyhxu.github.io">Dr. Yinghao Xu</a>. -->
                 
-                My research interests include distributed inference, adaptive vision system and 3D vision. 
+                My research interests lie in intelligent systems for edge computing, focusing on adaptive vision and multi-modal model inference.
+
+                 <!-- include distributed inference and (3D) vision system for the edge. -->
               </p>
               <!-- <p style="color:rgb(255, 0, 0)"> :)</p> -->
               <p style="text-align:center">
@@ -117,7 +151,7 @@
           </tr>
         </tbody></table>
 
-        <a id="news"></a>
+        <section id="news">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="width:100%;vertical-align:middle">
@@ -125,6 +159,7 @@
           </td>
           </tr>
         </tbody></table>
+        <section>
 
         <table class="wsite-multicol-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody class="wsite-multicol-tbody">

@@ -142,3 +142,63 @@ span.highlight {
 .justify {
     text-align: justify;
 }
+
+.navbar {
+    background-color: #333;
+}
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.navbar-nav > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-nav > li > a:hover {
+    background-color: #575757;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+/*.navbar-toggle:active,
+.navbar-toggle:hover {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}*/
+
+/*.navbar-collapse.collapse {
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+.navbar-collapse.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}*/
+
+.navbar-toggle {
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggle.collapsed {
+  background-color: transparent !important;
+}
+
+.navbar-toggle:hover {
+  background-color: #777 !important;
+}
+
+
+/* Ensure the dropdown is positioned right below the toggle button */
+.dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right; /* Align dropdown menu content to the right */
+}
+
+section {
+    scroll-margin-top: 50px; /* Adjust this value based on the navbar height */
+/*    padding: 20px;*/
+}
