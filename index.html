@@ -31,122 +31,109 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class='navbar-brand page-scroll' href="/">
-                    <span style='font-family:"Open Sans"; font-weight:300'>Cheng Chen</span>
-                </a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class='name' href="">HOME</a></li>
-                    <li><a class='name' href="#news">News</a></li>
-                    <li><a class='name' href="#Publications">Publications</a></li>
-                    <li><a class='name' href="#Awards">Awards</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-            <!-- from https://yangekun.gitee.io/blog/2018/12/14/2018-12-14-Bootstrap%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8A%98%E5%8F%A0%E9%9A%90%E8%97%8F/ -->
-<!--             <script>
-                  $(window).scroll(function () {
-                if ($(window).width() < 768) {
-                  $("#navbar a").click(function () {
-                    $("#navbar").collapse('hide');
-                  });
-                  $(window).scroll(function () {
-                    $("#navbar").collapse('hide');
-                  });
-                }
-              });	
-            </script> -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class='navbar-brand page-scroll' href="/">
+                            <span style='font-family:"Open Sans"; font-weight:300'>Cheng Chen</span>
+                        </a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class='name' href="">HOME</a></li>
+                            <li><a class='name' href="#news">News</a></li>
+                            <li><a class='name' href="#Publications">Publications</a></li>
+                            <li><a class='name' href="#Services">Services</a></li>
+                            <li><a class='name' href="#Awards">Awards</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var navbarCollapse = $('.navbar-collapse');
-            var navbarToggle = $('.navbar-toggle');
+            <script>
+                $(document).ready(function() {
+                    var navbarCollapse = $('.navbar-collapse');
+                    var navbarToggle = $('.navbar-toggle');
 
-            function isMobile() {
-                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                return /android|ipad|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
-            }
+                    function isMobile() {
+                        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                        return /android|ipad|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+                    }
 
-            if (!isMobile()) {
-                navbarToggle.addClass('hover-enabled');
-            }
+                    if (!isMobile()) {
+                        navbarToggle.addClass('hover-enabled');
+                    }
 
-            // Toggle the navbar on click/tap
-            navbarToggle.on('click', function() {
-                navbarCollapse.collapse('toggle');
-            });
+                    // Toggle the navbar on click/tap
+                    navbarToggle.on('click', function() {
+                        navbarCollapse.collapse('toggle');
+                    });
 
-            // Collapse the navbar when a link is clicked (mobile)
-            $('.navbar-nav a').click(function() {
-                navbarCollapse.collapse('hide');
-            });
+                    // Collapse the navbar when a link is clicked (mobile)
+                    $('.navbar-nav a').click(function() {
+                        navbarCollapse.collapse('hide');
+                    });
 
-            // Collapse the navbar when clicking outside of it
-            $(document).click(function(event) {
-                var clickover = $(event.target);
-                var isOpen = navbarCollapse.hasClass('show');
-                if (isOpen && !clickover.hasClass('navbar-toggle')) {
-                    navbarCollapse.collapse('hide');
-                }
-            });
+                    // Collapse the navbar when clicking outside of it
+                    $(document).click(function(event) {
+                        var clickover = $(event.target);
+                        var isOpen = navbarCollapse.hasClass('show');
+                        if (isOpen && !clickover.hasClass('navbar-toggle')) {
+                            navbarCollapse.collapse('hide');
+                        }
+                    });
 
-            $(window).scroll(function() {
-                if (navbarCollapse.hasClass('show')) {
-                    $('button.navbar-toggle').click();
-                }
-            });
+                    $(window).scroll(function() {
+                        if (navbarCollapse.hasClass('show')) {
+                            $('button.navbar-toggle').click();
+                        }
+                    });
 
-            // Toggle button state based on collapse state
-            navbarCollapse.on('show.bs.collapse', function() {
-                navbarToggle.removeClass('collapsed');
-            });
+                    // Toggle button state based on collapse state
+                    navbarCollapse.on('show.bs.collapse', function() {
+                        navbarToggle.removeClass('collapsed');
+                    });
 
-            navbarCollapse.on('hidden.bs.collapse', function() {
-                navbarToggle.addClass('collapsed');
-            });
-        });
+                    navbarCollapse.on('hidden.bs.collapse', function() {
+                        navbarToggle.addClass('collapsed');
+                    });
+                });
+            </script>
+            </td>
+            </tr>
+          </tbody>
+          </table>
 
-    </script>
 
-          </td>
-          </tr>
-        </tbody></table>
-
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
                 <name>Cheng Chen</name>
               </p>
               <p class="justify">I am a third-year Ph.D. student at the Elmore Family School of Electrical and Computer Engineering, Purdue University, supervised by <a href="https://bagchi.github.io/">Prof. Saurabh Bagchi</a>. 
-                Before that, I obtained a Bachelor's degree at Nanjing University in 2020 and a Master's degree at New York University in 2022.
+                Before that, I received my Bachelor's degree in Computer Science at <a href="https://www.nju.edu.cn/en/">Nanjing University</a> in 2020 and a Master's degree in Computer Engineering at <a href="https://engineering.nyu.edu/">New York University</a> in 2022.
 
-                I spent the Spring semester at University of California, Berkeley as an exchange student in 2019.
+                I spent the Spring semester at <a href="https://eecs.berkeley.edu/">University of California, Berkeley</a> as an exchange student in 2019.
                 
-                My research focuses on intelligent computer vision systems. Currently, I am working on enhancing the quality, robustness, and efficiency of cooperative perception for connected autonomous vehicles (CAVs). Previously, I worked on optimizing ensemble inference across heterogeneous edge devices to be deadline-aware and energy-efficient.
-                 <!-- include distributed inference and (3D) vision system for the edge. -->
+                My research focuses on <strong>intelligent computer vision systems</strong>. Currently, I am working on <strong>enhancing the quality, robustness, and efficiency of cooperative perception for connected autonomous vehicles (CAVs)</strong>. Previously, I worked on optimizing ensemble inference across heterogeneous edge devices to be deadline-aware and energy-efficient.
               </p>
               <!-- <p style="color:rgb(255, 0, 0)"> :)</p> -->
               <p style="text-align:center">
@@ -164,7 +151,8 @@
               <a href="images/ChengChen.jpg"><img style="width:100%;max-width:100%" src="images/ChengChen.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
-        </tbody></table>
+        </tbody>
+        </table>
 
         <section id="news">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -173,8 +161,8 @@
             <heading>News</heading>
           </td>
           </tr>
-        </tbody></table>
-        <section>
+        </tbody>
+      </table>
 
         <table class="wsite-multicol-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody class="wsite-multicol-tbody">
@@ -192,6 +180,7 @@
             </tr>
           </tbody>
         </table>
+      </section>
         
         <section id="Publications">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -206,7 +195,7 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9897166"> -->
-                <papertitle>EdgeFlex: Intelligent Edge Ensemble Inference</papertitle>
+                <papertitle class="justify">EdgeFlex: Intelligent Edge Ensemble Inference</papertitle>
               <!-- </a> -->
               <br>
               <strong>Cheng Chen</strong>,
@@ -227,7 +216,7 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9897166"> -->
-                <papertitle>HopTrack: A Real-time Multi-Object Tracking System for Embedded Device</papertitle>
+                <papertitle class="justify">HopTrack: A Real-time Multi-Object Tracking System for Embedded Device</papertitle>
               <!-- </a> -->
               <br>
               Xiang Li,
@@ -252,7 +241,7 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://link.springer.com/chapter/10.1007/978-3-031-19809-0_16">
-                <papertitle>Manifold Adversarial Learning for Cross-domain 3D Shape Representation</papertitle>
+                <papertitle class="justify">Manifold Adversarial Learning for Cross-domain 3D Shape Representation</papertitle>
               </a>
               <br>
               Hao Huang,
@@ -273,7 +262,7 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/abstract/document/9897166">
-                <papertitle>Non-Rigid Multiple Point Set Registration Using Latent Gaussian Mixture</papertitle>
+                <papertitle class="justify">Non-Rigid Multiple Point Set Registration Using Latent Gaussian Mixture</papertitle>
               </a>
               <br>
               Hao Huang,
@@ -289,7 +278,7 @@
 
       </section>
 
-<!--         <a id="experiences"></a>
+<!--       <a id="experiences"></a>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <heading>Experiences</heading>
             <tr onmouseout="neuralsimulator_stop()" onmouseover="neuralsimulator_start()"></tr>
@@ -358,20 +347,47 @@
             </tr>
             
           </tbody></table> -->
+
+      <section id="Services">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td>
+              <heading>Teaching and Services</heading>
+                <ul>
+                  <li><strong>Teaching Assistant</strong>: <a href="https://engineering.purdue.edu/ece477/">ECE 47700 Digital Systems Senior Design</a>, Purdue University<span style="float: right;">Spring 2025</span></li>
+                </ul>
+                <ul>
+                  <li><strong>Reviewer</strong>: IEEE Networking Letters<span style="float: right;">2024</span></li>
+                </ul>
+                <ul>
+                  <li><strong>Teaching Assistant</strong>: CS-GY 6953 / ECE-GY 7123 Deep Learning, New York University<span style="float: right;">Spring 2022</span></li>
+                </ul>
+            </td>
+          </tr>
+        </tbody></table>
+      </section>
          
-        <section id="Awards">
+      <section id="Awards">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td>
               <heading>Selected Awards</heading>
                 <ul>
-                  <li>The Myron M. Rosenthal Award for Best MS Academic Achievement, New York University, 2022</li>
-                  <li>Graduate School of Engineering Scholarship, New York University, 2020</li>
-                  <li>National Elite Program Scholarship, Nanjing University, 2018</li>
+                  <li><a href="https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering/students/student-awards#:~:text=2022-,Cheng%20Chen,-Xiaotian%20Li%0AZulong">Best MS Academic Achievement <strong>(Top 3)</strong></a>, New York University<span style="float: right;">2022</span></li>
+                </ul>
+                <ul>
+                  <li>Graduate School of Engineering Scholarship, New York University<span style="float: right;">2020</span></li>
+                </ul>
+                <ul>
+                  <li>People’s Award, Nanjing University<span style="float: right;">2017 & 2018</span></li>
+                </ul>
+                <ul>
+                  <li>National Elite Program Scholarship, Nanjing University<span style="float: right;">2018</span></li>
                 </ul>
             </td>
           </tr>
         </tbody></table>
+      </section>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
@@ -380,10 +396,20 @@
               <p style="text-align:center;font-size:small;">Thank <a href="https://jonbarron.info/">Dr. Jon Barron</a> for sharing the source code of his personal page.</p>
                 <!-- <br> -->
               </p>
+              <p style="text-align:center;font-size:small;">Last edited: <span id="edit-time"></span></p>
+
+              <script>
+                  function getLastEditedDate() {
+                      const currentDate = new Date();
+                      const date = currentDate.toLocaleDateString(); // You can customize the format here
+                      return date;
+                  }
+
+                  document.getElementById('edit-time').textContent = getLastEditedDate();
+              </script>
             </td>
           </tr>
         </tbody></table>
-      </section>
       </td>
     </tr>
   </table>
